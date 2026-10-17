@@ -1,4 +1,4 @@
-# TagVix — Omron PLC / Modbus → MySQL
+# TagVix — Omron and Other PLC / Modbus → MySQL
 
 Aplikasi TagVix untuk membaca data dari **PLC Omron CP1E** (via
 **Host Link serial**) **atau perangkat Modbus** (**Modbus RTU** serial /
