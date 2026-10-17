@@ -1,0 +1,31 @@
+-- Dumping database structure for db_tagvix
+DROP DATABASE IF EXISTS `db_tagvix`;
+CREATE DATABASE IF NOT EXISTS `db_tagvix` /*!40100 DEFAULT CHARACTER SET latin1 COLLATE latin1_swedish_ci */;
+USE `db_tagvix`;
+
+-- Dumping structure for table db_tagvix.t_reg_status
+DROP TABLE IF EXISTS `t_reg_status`;
+CREATE TABLE IF NOT EXISTS `t_reg_status` (
+  `ID` int(11) NOT NULL AUTO_INCREMENT,
+  `DEV_NAME` varchar(30) NOT NULL DEFAULT 'OMRON',
+  `GROUP_NAME` varchar(30) NOT NULL,
+  `TAG_NAME` varchar(50) NOT NULL DEFAULT '',
+  `REG_VALUE` varchar(50) DEFAULT NULL,
+  `TR_TIME` datetime DEFAULT current_timestamp(),
+  `CONNECT_STAT` char(1) DEFAULT '1',
+  PRIMARY KEY (`ID`) USING BTREE
+) ENGINE=MyISAM AUTO_INCREMENT=267 DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci ROW_FORMAT=DYNAMIC;
+
+-- Data exporting was unselected.
+
+-- Dumping structure for table db_tagvix.t_transmit
+DROP TABLE IF EXISTS `t_transmit`;
+CREATE TABLE IF NOT EXISTS `t_transmit` (
+  `DEV_NAME` varchar(100) DEFAULT NULL,
+  `REG_NAME` varchar(100) DEFAULT NULL,
+  `REG_VALUE` varchar(50) DEFAULT NULL,
+  `TTL` smallint(5) unsigned DEFAULT NULL,
+  `TR_TIME` datetime DEFAULT NULL
+) ENGINE=MyISAM DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
+
+-- Data exporting was unselected.
